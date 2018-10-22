@@ -1,5 +1,10 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+}
+.App {
+  font-family: 'Roboto', sans-serif;
+}
+.marginBot {
+  margin-bottom: 10px;
 }
