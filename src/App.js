@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import PrimarySearchAppBar from './Components/Header';
+import PrimarySearchAppBar from './Components/PrimarySearchAppBar';
 import { Container, Row, Col } from 'reactstrap';
 import Sidebar from './Components/Sidebar';
 import ChatPage from './Components/ChatPage';

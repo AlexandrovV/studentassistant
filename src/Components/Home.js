@@ -139,7 +139,7 @@ const Home = props => {
             </Row>
             <Row style={{marginTop: '3rem'}}>
                 <Col md="6">
-                    <h2 className="text-center heading">Images</h2>
+                    <h2 className="text-center heading">Fonts</h2>
                     <Row>
                         <Col md="6">
                         Main Font: Google font: Roboto Condensed / sans-serif
@@ -150,7 +150,7 @@ const Home = props => {
                     </Row>
                 </Col>
                 <Col md="6">
-                    <div  style={{height: '100%', padding: '0 90px'}}>
+                    <div  style={{height: '100%', padding: '0 70px'}}>
                         <h2>Roboto Condensed</h2>
                         QWERTYUIOPASDFGHJKLZXCVBNM<br/>
                         qwertyuiopasdfghjklzxcvbnm<br/>
