@@ -6,7 +6,7 @@ const Home = props => {
         <Row>
             <Row style={{marginTop: '3rem'}}>
                 <Col md="6">
-                    <h2 className="text-center">Our logo is</h2>
+                    <h2 className="text-center heading">Our logo is</h2>
                     <Row>
                         <Col md="4">
                             <img src={require('../img/logo_1.png')} style={{width: '100%'}}/>
@@ -35,13 +35,13 @@ const Home = props => {
                     </div>
                 </Col>
                 <Col md="6">
-                    <h2 className="text-center">Our mission is</h2>
+                    <h2 className="text-center heading">Our mission is</h2>
                     <img src={require('../img/OurMission.png')} style={{width: '100%'}}/>
                 </Col>
             </Row>
             <Row style={{marginTop: '3rem'}}>
                 <Col md="6">
-                    <h2 className="text-center">Our icons</h2>
+                    <h2 className="text-center heading">Our icons</h2>
                     <Row>
                         <Col md="2">
                             <img src={require('../img/books-stack-of-three.png')} style={{width: '70%'}}/>
@@ -76,13 +76,13 @@ const Home = props => {
                     </div>
                 </Col>
                 <Col md="6">
-                    <h2 className="text-center">Our Colors and Palette</h2>
+                    <h2 className="text-center heading">Our Colors and Palette</h2>
                     <Row>
                         <Col md="8">
                             Background color: #FFFFFF
                         </Col>
                         <Col md="4">
-                            <span style={{display: 'inline-block', backgroundColor: '#FFFFFD', width: '25px', height: '100%', border: '1px solid #000000'}}></span>
+                            <span style={{display: 'inline-block', backgroundColor: '#FFFFFD', width: '25px', height: '25px', border: '1px solid #000000'}}></span>
                         </Col>
                     </Row>
                     <Row stlye={{marginBot: '10px'}}>
@@ -90,7 +90,7 @@ const Home = props => {
                             Main color: #3F51B5
                         </Col>
                         <Col md="4">
-                            <span style={{display: 'inline-block', backgroundColor: '#3F51B5', width: '25px', height: '100%', border: '1px solid #000000'}}></span>
+                            <span style={{display: 'inline-block', backgroundColor: '#3F51B5', width: '25px', height: '25px', border: '1px solid #000000'}}></span>
                         </Col>
                     </Row>
                     <Row stlye={{marginBot: '10px'}}>
@@ -98,7 +98,7 @@ const Home = props => {
                             Grad color: #0060A0
                         </Col>
                         <Col md="4">
-                            <span style={{display: 'inline-block', backgroundColor: '#0060A0', width: '25px', height: '100%', border: '1px solid #000000'}}></span>
+                            <span style={{display: 'inline-block', backgroundColor: '#0060A0', width: '25px', height: '25px', border: '1px solid #000000'}}></span>
                         </Col>
                     </Row>
                     <Row stlye={{marginBot: '10px'}}>
@@ -106,7 +106,7 @@ const Home = props => {
                             2 Grad color: #009AFF
                         </Col>
                         <Col md="4">
-                            <span style={{display: 'inline-block', backgroundColor: '#009AFF', width: '25px', height: '100%', border: '1px solid #000000'}}></span>
+                            <span style={{display: 'inline-block', backgroundColor: '#009AFF', width: '25px', height: '25px', border: '1px solid #000000'}}></span>
                         </Col>
                     </Row>
                     <Row className="marginBot">
@@ -114,14 +114,14 @@ const Home = props => {
                             3 Grad color: #03B9EE
                         </Col>
                         <Col md="4">
-                            <span style={{display: 'inline-block', backgroundColor: '#03B9EE', width: '25px', height: '100%', border: '1px solid #000000'}}></span>
+                            <span style={{display: 'inline-block', backgroundColor: '#03B9EE', width: '25px', height: '25px', border: '1px solid #000000'}}></span>
                         </Col>
                     </Row>
                 </Col>
             </Row>
             <Row style={{marginTop: '3rem'}}>
                 <Col md="6">
-                    <h2 className="text-center">Images</h2>
+                    <h2 className="text-center heading">Images</h2>
                     <Row>
                         <Col md="6">
                             <img src={require('../img/main-qimg-d92d977a120dae649f0df76591d725cc-c.jpg')} style={{width: '100%'}}/>
@@ -139,15 +139,25 @@ const Home = props => {
             </Row>
             <Row style={{marginTop: '3rem'}}>
                 <Col md="6">
-                    <div style={{height: '100%', padding: '70px'}}>
-                        Google font: Roboto Condensed (main font) / sans-serif<br/>
-                        link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"
-                        Roboto Condensed<br/>
-                    </div>
+                    <h2 className="text-center heading">Images</h2>
+                    <Row>
+                        <Col md="6">
+                        Main Font: Google font: Roboto Condensed / sans-serif
+                        </Col>
+                        <Col md="6">
+                        Headers Font: Google font: Oswald / sans-serif
+                        </Col>
+                    </Row>
                 </Col>
                 <Col md="6">
-                    <h2>Our fonts</h2>
-                    <img src={require('../img/roboto-condensed.png')} style={{width: '100%'}}/>
+                    <div  style={{height: '100%', padding: '0 90px'}}>
+                        <h2>Roboto Condensed</h2>
+                        QWERTYUIOPASDFGHJKLZXCVBNM<br/>
+                        qwertyuiopasdfghjklzxcvbnm<br/>
+                        <h2 className="oswald">Oswald</h2>
+                        <span className="oswald">QWERTYUIOPASDFGHJKLZXCVBNM</span><br/>
+                        <span className="oswald">qwertyuiopasdfghjklzxcvbnm</span><br/>
+                    </div>
                 </Col>
             </Row>
         </Row>

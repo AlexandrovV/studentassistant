@@ -4,6 +4,14 @@ body {
 }
 .App {
   font-family: 'Roboto', sans-serif;
+  line-height: 2.5;
+}
+.heading {
+  font-family: 'Oswald', sans-serif;
+  margin-bottom: 40px;
+}
+.oswald {
+  font-family: 'Oswald', sans-serif;
 }
 .marginBot {
   margin-bottom: 10px;
