@@ -22,6 +22,7 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import Divider from '@material-ui/core/Divider';
 import AppBar from '@material-ui/core/AppBar';
+import { Link } from 'react-router-dom';
 
 const styles = theme => ({
     root: {
@@ -213,7 +214,7 @@ const styles = theme => ({
                 Student Assistant
               </Typography>
               <Button style={{marginLeft: '2rem', color: '#ffffff'}}>
-                  Logo
+                  <Link to="/" className="link">Logo</Link>
               </Button>
               <Button style={{marginLeft: '2rem', color: '#ffffff'}}>
                   Mission
@@ -232,7 +233,7 @@ const styles = theme => ({
               </Button>
               <div className={classes.grow} />
               <div className={classes.sectionDesktop}>
-                <IconButton color="inherit">
+                {/* <IconButton color="inherit">
                   <Badge className={classes.margin} badgeContent={4} color="secondary">
                     <MailIcon />
                   </Badge>
@@ -241,7 +242,13 @@ const styles = theme => ({
                   <Badge className={classes.margin} badgeContent={17} color="secondary">
                     <NotificationsIcon />
                   </Badge>
-                </IconButton>
+                </IconButton> */}
+                <Button style={{marginLeft: '2rem', color: '#ffffff'}}>
+                  <Link to="/login" className="link">Sign in</Link>
+                </Button>
+                <Button style={{marginLeft: '2rem', color: '#ffffff'}}>
+                  <Link to="/register" className="link">Sign up</Link>
+                </Button>
                 <IconButton
                   aria-owns={isMenuOpen ? 'material-appbar' : null}
                   aria-haspopup="true"
@@ -265,7 +272,7 @@ const styles = theme => ({
             >
                 <List>
                     <ListItem style={{cursor: 'pointer'}}>
-                        My profile
+                      <Link to="/profile">My profile</Link>
                     </ListItem>
                     <Divider />
                     <ListItem style={{cursor: 'pointer'}}>
@@ -277,7 +284,7 @@ const styles = theme => ({
                     </ListItem>
                     <Divider />
                     <ListItem style={{cursor: 'pointer'}}>
-                        My Chats
+                        <Link to="/chat">My Chats</Link>
                     </ListItem>
                     <Divider />
                     <ListItem style={{cursor: 'pointer'}}>

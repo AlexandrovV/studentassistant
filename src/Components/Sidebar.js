@@ -4,6 +4,7 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Divider from '@material-ui/core/Divider';
+import { Link } from 'react-router-dom';
 
 export default class Sidebar extends Component {
     render() {
@@ -22,9 +23,13 @@ export default class Sidebar extends Component {
                     <ListItem>
                         My group
                     </ListItem>
+                    
                     <ListItem>
+                    <Link to="/chat">
                         My Chats
+                        </Link>
                     </ListItem>
+                   
                     <ListItem>
                         My Homework
                     </ListItem>

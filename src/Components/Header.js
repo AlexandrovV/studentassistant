@@ -22,6 +22,7 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import Divider from '@material-ui/core/Divider';
 import AppBar from '@material-ui/core/AppBar';
+import { Link } from 'react-router-dom';
 
 const styles = theme => ({
     root: {
@@ -210,7 +211,7 @@ const styles = theme => ({
                 <MenuIcon />
               </IconButton>
               <Typography className={classes.title} variant="title" color="inherit" noWrap>
-                Student Assistant
+                <Link to="/" className="link">Student Assistant</Link>
               </Typography>
               <Button style={{marginLeft: '2rem', color: '#ffffff'}}>
                   Assignments
@@ -231,7 +232,7 @@ const styles = theme => ({
                     Help
                 </DropdownToggle>
                 <DropdownMenu>
-                <DropdownItem>FAQ</DropdownItem>
+                <DropdownItem><Link to="/qa">FAQ</Link></DropdownItem>
                 <DropdownItem>User manual</DropdownItem>
                 </DropdownMenu>
             </ButtonDropdown>
@@ -260,7 +261,7 @@ const styles = theme => ({
               </div>
               <div className={classes.grow} />
               <div className={classes.sectionDesktop}>
-                <IconButton color="inherit">
+                {/* <IconButton color="inherit">
                   <Badge className={classes.margin} badgeContent={4} color="secondary">
                     <MailIcon />
                   </Badge>
@@ -269,7 +270,13 @@ const styles = theme => ({
                   <Badge className={classes.margin} badgeContent={17} color="secondary">
                     <NotificationsIcon />
                   </Badge>
-                </IconButton>
+                </IconButton> */}
+                <Button style={{marginLeft: '2rem', color: '#ffffff'}}>
+                  <Link to="/login" className="link">Sign in</Link>
+                </Button>
+                <Button style={{marginLeft: '2rem', color: '#ffffff'}}>
+                  <Link to="/register" className="link">Sign up</Link>
+                </Button>
                 <IconButton
                   aria-owns={isMenuOpen ? 'material-appbar' : null}
                   aria-haspopup="true"
