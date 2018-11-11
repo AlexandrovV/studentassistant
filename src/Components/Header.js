@@ -165,7 +165,7 @@ const styles = theme => ({
           open={isMenuOpen}
           onClose={this.handleMenuClose}
         >
-          <MenuItem onClick={this.handleClose}>Profile</MenuItem>
+          <Link to="/profile" class="link"><MenuItem onClick={this.handleClose}>Profile</MenuItem></Link>
           <MenuItem onClick={this.handleClose}>Logout</MenuItem>
         </Menu>
       );
@@ -214,17 +214,15 @@ const styles = theme => ({
                 <Link to="/" className="link">Student Assistant</Link>
               </Typography>
               <Button style={{marginLeft: '2rem', color: '#ffffff'}}>
-                  Assignments
+                <Link to="/assignments" className="link">Assignments</Link>
               </Button>
               <ButtonDropdown isOpen={this.state.materialsDropdownOpen} toggle={this.toggleMaterials}>
                 <DropdownToggle caret style={{backgroundColor: 'transparent', border: 'none'}} >
                     Materials
                 </DropdownToggle>
                 <DropdownMenu>
-                <DropdownItem>Academic calendar</DropdownItem>
-                <DropdownItem>Books</DropdownItem>
-                <DropdownItem>Educational software</DropdownItem>
-                <DropdownItem>Schedule</DropdownItem>
+                <Link to="/materials/books" className="link"><DropdownItem>Books</DropdownItem></Link>
+                <Link to="/materials/soft" className="link"><DropdownItem>Educational software</DropdownItem></Link>
                 </DropdownMenu>
             </ButtonDropdown>
             <ButtonDropdown isOpen={this.state.helpDropdownOpen} toggle={this.toggleHelp}>
@@ -232,8 +230,8 @@ const styles = theme => ({
                     Help
                 </DropdownToggle>
                 <DropdownMenu>
-                <DropdownItem><Link to="/qa">FAQ</Link></DropdownItem>
-                <DropdownItem>User manual</DropdownItem>
+                <Link to="/qa"><DropdownItem>Q&A</DropdownItem></Link>
+                <Link to="/manual"><DropdownItem>User manual</DropdownItem></Link>
                 </DropdownMenu>
             </ButtonDropdown>
             <ButtonDropdown isOpen={this.state.contactsDropdownOpen} toggle={this.toggleContacts}>
@@ -241,8 +239,8 @@ const styles = theme => ({
                     Contacts
                 </DropdownToggle>
                 <DropdownMenu>
-                <DropdownItem>About us</DropdownItem>
-                <DropdownItem>Donate</DropdownItem>
+                <Link to="/about" className="link"><DropdownItem>About us</DropdownItem></Link>
+                <Link to="/donate" className="link"><DropdownItem>Donate</DropdownItem></Link>
                 </DropdownMenu>
             </ButtonDropdown>
               
@@ -271,12 +269,16 @@ const styles = theme => ({
                     <NotificationsIcon />
                   </Badge>
                 </IconButton> */}
-                <Button style={{marginLeft: '2rem', color: '#ffffff'}}>
-                  <Link to="/login" className="link">Sign in</Link>
-                </Button>
-                <Button style={{marginLeft: '2rem', color: '#ffffff'}}>
-                  <Link to="/register" className="link">Sign up</Link>
-                </Button>
+                <Link to="/login" className="link">
+                  <Button style={{marginLeft: '2rem', color: '#ffffff'}}>
+                    Sign in
+                  </Button>
+                </Link>
+                <Link to="/register" className="link">
+                  <Button style={{marginLeft: '2rem', color: '#ffffff'}}>
+                    Sign up
+                  </Button>
+                </Link>
                 <IconButton
                   aria-owns={isMenuOpen ? 'material-appbar' : null}
                   aria-haspopup="true"
@@ -299,29 +301,35 @@ const styles = theme => ({
                 style={{overflow: 'hidden'}}
             >
                 <List>
+                  <Link to="/profile">
                     <ListItem style={{cursor: 'pointer'}}>
                         My profile
                     </ListItem>
+                  </Link>
                     <Divider />
+                  <Link to="/friends">
                     <ListItem style={{cursor: 'pointer'}}>
                         Friends
                     </ListItem>
+                  </Link>
                     <Divider />
+                  <Link to="/mygroup">
                     <ListItem style={{cursor: 'pointer'}}>
                         My group
                     </ListItem>
+                  </Link>
                     <Divider />
+                  <Link to="/chat">
                     <ListItem style={{cursor: 'pointer'}}>
                         My Chats
                     </ListItem>
+                  </Link>
                     <Divider />
-                    <ListItem style={{cursor: 'pointer'}}>
-                        My Homework
-                    </ListItem>
-                    <Divider />
+                  <a href="http://dl.iitu.kz">
                     <ListItem style={{cursor: 'pointer'}}>
                         Move to dl.iitu.kz
                     </ListItem>
+                  </a>
                 </List>
             </Drawer>
           {renderMenu}
